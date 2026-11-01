@@ -1,0 +1,21 @@
+cabal-version:      2.4
+name:               textbook-processing
+version:            0.1.0.0
+synopsis:           Обробка тексту підручника: сортування слів за кількістю заданої літери
+build-type:         Simple
+extra-doc-files:    README.md
+extra-source-files: examples/*.txt
+
+executable textbook
+  main-is:          Main.hs
+  hs-source-dirs:   app, src
+  other-modules:    Alphabet
+                    Console
+                    Menu
+                    Parser
+                    Sorting
+                    Types
+  build-depends:    base >=4.14 && <5
+                  , containers
+  default-language: Haskell2010
+  ghc-options:      -Wall
